@@ -165,6 +165,7 @@ body{
   overflow: hidden;
   padding-top: 32px;
   padding-bottom: 32px;
+  margin-top: 64px;
 }
 
 .partners-track {
@@ -184,6 +185,73 @@ body{
 
 .partners-group img {
   margin: 0 60px;
+}
+
+#mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+#mockup {
+  max-width: 1184px;
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+}
+
+.mockup-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mockup-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 25px;
+}
+
+.mockup-btns-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+}
+
+#red {
+  background-color: red;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
+
+.mockup-nav {
+  list-style: none;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px;
+  max-width: 1114px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.deposit-btn {
+  background: linear-gradient(90deg, #C01BE5, #7B00FF);
+  padding: 8px;
+  border-radius: 10px;
 }
 
 @keyframes partners-scroll {
