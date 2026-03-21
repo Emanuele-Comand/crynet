@@ -323,9 +323,7 @@ img {
   display: flex;
   max-width: 1114px;
   width: 100%;
-  border: 2px solid rgba(255, 255, 255, 0.1); 
   margin-top: 64px;
-  border-radius: 15px;
 }
 
 .sidebar {
@@ -380,13 +378,16 @@ img {
 
 .table {
   width: 66%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-.table-header > p {
+.table-header  {
   color: #fff;
   font-family: var(--font-main);
   font-size: 24px;
-  padding: 32px;
+  padding-left: 32px;
 }
 
 .table-nav {
@@ -395,10 +396,12 @@ img {
   align-items: center;
   color: #fff;
   font-family: var(--font-main);
-  font-size: var(--primary-font-size);
   gap: 16px;
   padding-left: 32px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
 }
+
 
 @keyframes partners-scroll {
   0% {
