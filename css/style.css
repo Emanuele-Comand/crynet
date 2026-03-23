@@ -229,6 +229,7 @@ img {
   width: 100%;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mockup-body {
@@ -277,6 +278,7 @@ img {
   border: 2px solid rgba(255, 255, 255, 0.1);
   justify-content: space-between;
   align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mockup-nav {
@@ -341,7 +343,7 @@ img {
 }
 
 .profile-data > p:first-child {
-  color: #404040;
+  color: #acacac;
   font-weight: bold;
   font-size: 24px;
   font-family: var(--font-main);
@@ -381,27 +383,21 @@ img {
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-left: none;
 }
 
-.table-header  {
+.table-header {
   color: #fff;
   font-family: var(--font-main);
   font-size: 24px;
-  padding-left: 32px;
+  padding: 24px 32px;
 }
 
 .table-nav {
   position: relative;
-}
-
-.table-nav::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .table-nav th {
@@ -409,11 +405,14 @@ img {
   font-family: var(--font-main);
   text-align: left;
   width: 130px;
+  padding: 12px 0;
+  font-weight: normal;
+  font-size: var(--primary-font-size);
 }
 
 .table-nav th:first-child {
-  padding-left: 32px; 
-  padding-right: 48px; 
+  padding-left: 32px;
+  padding-right: 48px;
 }
 
 .table-nav th:first-child p {
@@ -421,6 +420,7 @@ img {
   border-radius: 7px;
   padding: 8px;
   width: 80px;
+  display: inline-block;
 }
 
 .table-row {
@@ -429,28 +429,61 @@ img {
   font-size: var(--primary-font-size);
 }
 
+.table-row:first-of-type .coin-meta {
+  padding-top: 32px;
+}
+
+.table-row td {
+  padding: 16px 24px;
+  vertical-align: middle;
+}
+
+.table-row td:first-child {
+  padding-left: 32px;
+}
+
+.table-row td:last-child {
+  padding-right: 32px;
+}
+
 .coin-meta {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 64px;
   gap: 16px;
-  width: 100%;
 }
 
 .coin-name p:first-child {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
+  margin: 0;
 }
 
 .coin-name p {
   font-size: 20px;
   color: #acacac;
+  margin: 0;
+}
+
+.amount p,
+.price p,
+.change p,
+.trading p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.amount p:first-child,
+.price p:first-child,
+.change p:first-child,
+.trading p:first-child {
+  color: #acacac;
+  font-size: 14px;
 }
 
 .amount p:nth-child(2) {
   font-weight: bold;
+  color: #fff;
 }
 
 .amount p:nth-child(3) {
@@ -459,6 +492,7 @@ img {
 
 .price p:nth-child(2) {
   font-weight: bold;
+  color: #fff;
 }
 
 .price p:nth-child(3) {
@@ -467,23 +501,20 @@ img {
 
 .negative p:nth-child(2) {
   color: #ff0000;
-  padding-top: 8px;
 }
 
- .neutral p:nth-child(2) {
+.neutral p:nth-child(2) {
   color: #acacac;
-  padding-top: 8px;
 }
 
 .positive p:nth-child(2) {
   color: #36FF36;
-  padding-top: 8px;
 }
 
 .trading p:nth-child(2) {
   color: #C01BE5;
   text-decoration: underline;
-  padding-top: 8px;
+  cursor: pointer;
 }
 
 @keyframes partners-scroll {
@@ -675,6 +706,52 @@ img {
     margin: 0 30px;
     max-width: 60px;
   }
+
+  /* Tablet table styles */
+  .mockup-main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 16px;
+  }
+
+  .table {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .table-nav th {
+    width: auto;
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+
+  .table-nav th:first-child {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .table-header {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .table-row td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  .table-row td:first-child {
+    padding-left: 16px;
+  }
+
+  .coin-name p:first-child,
+  .coin-name p {
+    font-size: 16px;
+  }
 }
 
 /* Mobile Landscape */
@@ -765,6 +842,37 @@ img {
   .partners-group img {
     margin: 0 15px;
     max-width: 40px;
+  }
+
+  /* Mobile landscape table styles */
+  .table-header {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .table-nav th {
+    font-size: 11px;
+    padding: 6px 2px;
+  }
+
+  .table-nav th:first-child {
+    padding-left: 12px;
+    padding-right: 8px;
+  }
+
+  .table-nav th:first-child p {
+    width: auto;
+    padding: 4px 8px;
+  }
+
+  .table-row td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+
+  .coin-name p:first-child,
+  .coin-name p {
+    font-size: 14px;
   }
 }
 
@@ -872,6 +980,45 @@ img {
   .partners-group img {
     margin: 0 10px;
     max-width: 30px;
+  }
+
+  /* Mobile portrait table styles */
+  .table-header {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .table-nav th {
+    font-size: 10px;
+    padding: 4px 2px;
+  }
+
+  .table-nav th:first-child {
+    padding-left: 8px;
+  }
+
+  .table-nav th:first-child p {
+    padding: 2px 6px;
+    font-size: 10px;
+  }
+
+  .table-row td {
+    padding: 6px 2px;
+    font-size: 11px;
+  }
+
+  .coin-name p:first-child,
+  .coin-name p {
+    font-size: 12px;
+  }
+
+  .coin-meta {
+    gap: 8px;
+  }
+
+  .coin-meta img {
+    width: 24px;
+    height: 24px;
   }
 }
 
