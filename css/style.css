@@ -516,6 +516,86 @@ img {
   cursor: pointer;
 }
 
+#features {
+  position: relative;
+  padding-top: 128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#features-title {
+  font-family: var(--font-main);
+  font-size: 64px;
+  text-align: center;
+  box-shadow: 0;
+  color: transparent;
+  background: linear-gradient(270deg, #404040, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow:  rgba(000, 000, 000, 0.1);
+}
+
+.logo-circle-wrapper {
+  border: 1px solid #C01BE5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 400px;
+  padding-top: 32px;
+  margin-top: 256px;
+  box-shadow: 0px 4px 32px 16px rgba(255,255,255,0.2);
+}
+
+#bitcoin {
+ position: absolute;
+ top: 256px;
+ right: 256px;
+}
+
+#litecoin {
+ position: absolute;
+ top: 520px;
+ right: 160px;
+}
+
+#solana {
+  position: absolute;
+  top: 700px;
+  right: 256px;
+}
+
+#avalanche {
+ position: absolute;
+ top: 340px;
+ left: 256px;
+}
+
+#binance {
+ position: absolute;
+ top: 600px;
+ left: 160px;
+}
+
+#ethereum {
+ position: absolute;
+ top: 800px;
+ left: 256px;
+}
+
+.black-circle {
+  position: absolute;
+  top: 400px;
+  left: 320px; 
+  background-color: rgba(000, 000, 000, 0.7);
+  box-shadow: 0px 4px 32px 16px rgba(000,000,000,1);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 100;
+}
+
 @keyframes partners-scroll {
   0% {
     transform: translate3d(0, 0, 0);
