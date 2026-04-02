@@ -1972,3 +1972,9 @@ footer {
     padding: 4px 12px;
   }
 }
+
+@media (min-width: 1600px) {
+  .black-circle {
+    display: none;
+  }
+}
